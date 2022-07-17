@@ -1,0 +1,27 @@
+name: "HoYoLAB Attendance"
+
+on:
+  schedule:
+    - cron: "0 16 * * *" # 00:00 in UTC+8 
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Git Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: HoYoLAB Attend
+        env:
+          LTUID: ${{ secrets.LTUID }}
+          LTOKEN: ${{ secrets.LTOKEN }}
+        run: |
+          pip install -r requirements.txt
+          python3 ./main.py
