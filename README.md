@@ -1,29 +1,29 @@
-# Genshin Daily Check-In
+# 原神デイリーログインボーナス
 
-Automate HoYoLAB Daily Check-In Using Github Actions
+Github Actions でデイリーログインボーナスを自動で受け取る
 
-[JP](README.ja.md)
+[English](README.en.md)
 
-# Instructions
+# 導入方法
 
-1. Fork the repository
-2. Go to Settings -> Secrets
-3. Click "New repository secret" button
-4. Make `LTUID`, `LTOKEN` secrets with your authentication data, following the instructions below
-5. Go to Actions, Click on `Enable Actions Workflow` button
-6. Click `HoYoLAB Attendance` on left Workflows list, and Press Enable Workflow button
-7. You're all set! It will be automatically run your attendance every 16:00 UTC+0
+1. このリポジトリをフォークする
+2. Settings -> Secrets に移動する
+3. `New repository secret"`のボタンを押す
+4. あなたの認証情報を下記の手順で入手し、 `LTUID`、 `LTOKEN` の secrets 変数を作る
+5. Actions のページに行き、`Enable Actions Workflow`ボタンを押す
+6. 左の workflow list から`HoYoLAB Attendance`を選び`Enable Workflow`ボタンを押す
+7. 準備完了！毎日 01:00 JST に自動でログインボーナスを受け取れる
 
-# How can I get my Auth Datas?
+# 認証情報の入手方法
 
-Instruction based on Chrome Dev Tools:
+Chrome のデベロッパーツールを想定:
 
-1. Go to [HoYoLAB](http://hoyolab.com)
-2. Log-In to your account
-3. Press F12 to open Developer Tools
-4. Go to Application -> Cookies -> `https://www.hoyolab.com`
-5. Copy `ltuid` and `ltoken`
+1. [HoYoLAB](http://hoyolab.com)にアクセスする
+2. 自分のアカウントでログインする
+3. `F12`を押してデベロッパーツールを開く
+4. アプリケーション -> Cookies -> `https://www.hoyolab.com`に移動する
+5. `ltuid`と`ltoken`の値をコピーする
 
-# License
+# ライセンス
 
 [MIT License](LICENSE)
